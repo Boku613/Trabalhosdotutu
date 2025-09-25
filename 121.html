@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Cor de Fundo</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Escolha uma cor para o fundo:</h1>
+
+    <!-- Seletor de cor -->
+    <input type="color" id="colorPicker">
+
+    <!-- Botões de cor -->
+    <div class="botoes">
+        <button id="butao1">Rosa</button>
+        <button id="butao2">Verde</button>
+        <button id="butao3">Roxo</button>
+        <button id="butao4">Azul</button>z
+    </div>
+
+    <!-- Nova lista e botão -->
+   
+    <script src="21.js"></script>
+    
+ 
+    <button onclick="adicionarNumero()">Adicionar Número</button>
+    <button onclick="removerNumero()">Remover Último Número</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        let contador = 1; // começa no 1
+
+        function adicionarNumero() {
+            const ul = document.getElementById("lista");
+            const li = document.createElement("li");
+            li.textContent = contador;
+            ul.appendChild(li);
+            contador++;
+        }
+
+        function removerNumero() {
+            const ul = document.getElementById("lista");
+            if (ul.lastChild) {
+                ul.removeChild(ul.lastChild);
+                contador--;
+            }
+        }
+    </script>
+
+    <H2 id="meuTexto"><p>Lorem ipsum dolor sit amet. Qui explicabo sint ab distinctio laudantium vel voluptatem odio qui Quis omnis et modi magnam. Ad illo mollitia eos voluptas alias quo nisi dolores id enim commodi. Aut voluptas eius ex libero explicabo ex modi voluptas eos illum placeat ut nisi numquam. Est nihil illum ut sint voluptatum a modi eveniet! </p><p>Et accusantium quia ea quam numquam eum quidem quia eum voluptates animi aut voluptas doloribus quo dolorum dignissimos. Sed cumque aliquid et quia doloremque vel aspernatur internos. Et maiores dolore qui quia impedit ut nisi eveniet vel sint nemo et culpa aspernatur! </p><p>Sed iure alias et porro assumenda quo asperiores perferendis. Vel voluptatibus culpa nam velit galisum est quia asperiores non aperiam rerum aut explicabo Quis sit corporis exercitationem in repellendus asperiores. Sit autem explicabo quo esse consequatur qui dolores nisi est dolor odit. </p>
+</H2>
+<button onclick="esconderTexto()">Esconder</button>
+<button onclick="mostrarTexto()">Mostrar</button>
+<div id="textinho">Texto Original</div>
+<button id="botaob">Mostrar A Frase</button>
+
+
+
+</body>
+<script src="21.js"></script>
+</html>
